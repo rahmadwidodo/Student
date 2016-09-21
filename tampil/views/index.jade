@@ -1,0 +1,75 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome Rahmad Widodo
+
+	// Wrapper
+	#wrapper
+
+		// Student INFO
+		#studentInfo
+			h2 Student Info
+				p
+					strong Name:
+					|	<span id='studentInfoName'></span>
+					br
+					strong Age:
+					|	<span id='studentInfoAge'></span>
+					br
+					strong Gender:
+					|	<span id='studentInfoGender'></span>
+					br
+					strong Location:
+					|	<span id='studentInfoLocation'></span>
+		// /Student INFO
+
+		// Student LIST
+		h2 Student List
+		#studentList
+			table
+				thead
+					th Student ID
+					th Student Name
+					th Email
+					th Delete?
+					tbody
+		// /Student LIST
+
+		//ADD OR Update Student
+		h2 Add Student
+		#addStudent
+			fieldset
+				table
+					tbody
+						tr
+							th ID
+							td
+								input#inputStudentID(type='text', placeholder='Student ID')
+							th Name
+							td
+								input#inputStudentFullName(type='text', placeholder='Name')
+						tr
+							th Age
+							td
+								input#inputStudentAge(type='text', placeholder='Age')
+							th Location
+							td
+								input#inputStudentAddress(type='text', placeholder='Location')
+						tr
+							th Gender
+							td
+								input#inputStudentGender(type='text', placeholder='Gender')
+							th Email
+							td
+								input#inputStudentEmail(type='text', placeholder='Email')
+						tr
+							td
+							td
+							td
+								button#btnAddStudent Insert Data
+							td
+								button#btnUpdateStudent Update Data
+		// /ADD OR Update Student
+
+	// /WRAPPER
